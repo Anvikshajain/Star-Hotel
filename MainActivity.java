@@ -1,6 +1,7 @@
 package com.example.hotelmanagement;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText name;
     private EditText pwd;
-    private Button button;
-    private TextView info;
+    private Button button0,button1,button2;
+    private TextView info1,infor2;
     private ImageView beginlogo;
 
     @Override
@@ -24,21 +25,39 @@ public class MainActivity extends AppCompatActivity {
 
         name = (EditText)findViewById(R.id.etName);
         pwd = (EditText)findViewById(R.id.etPassword);
-        button = (Button)findViewById(R.id.btnLogin);
+        button0 = (Button)findViewById(R.id.btnLogin);
         beginlogo = (ImageView)findViewById(R.id.imageView3);
+        button1 = (Button)findViewById(R.id.btnreg);
+        button2 = (Button)findViewById(R.id.btnfrgt);
 
-        button.setOnClickListener(new View.OnClickListener(){
+        button0.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 validate(name.getText().toString(), pwd.getText().toString());
             }
         });
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,RegisterActivity.class));
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,FpwdActivity.class));
+            }
+        });
+
+
     }
 
     private void validate (String username , String password )
     {
-        if (username.equals("Shubhangi7765@gmail.com") && password.equals("SomeOneYouLoved")){
-            startActivity(new Intent(MainActivity.this,SecondActivity.class));
+        if (username.equals("Su") && password.equals("12345")){
+            startActivity(new Intent(MainActivity.this,SignupActivity.class));
         }
     }
 }
