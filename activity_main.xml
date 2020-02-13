@@ -24,8 +24,9 @@
         android:id="@+id/etName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/name"
+        android:hint="@string/mailid"
         android:inputType="textPersonName"
         android:textColor="#ECE2E2"
         android:textColorHint="#DDFFFFFF"
@@ -34,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.241"
-        android:autofillHints="" tools:targetApi="o"/>
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -54,10 +55,12 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_round"
         android:shadowColor="#C52525"
         android:text="@string/login"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -65,90 +68,33 @@
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
         app:layout_constraintVertical_bias="0.147" />
 
-    <TextView
-        android:id="@+id/sup1"
-        android:layout_width="92dp"
-        android:layout_height="24dp"
-        android:text="@string/new_user"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/btnreg"
-        app:layout_constraintEnd_toEndOf="@+id/btnreg"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/sup2"
-        app:layout_constraintTop_toTopOf="@+id/btnreg"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/sup2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:text="@string/sign_up"
-        android:textColor="#F8F8F8"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/btnreg"
-        app:layout_constraintEnd_toEndOf="@+id/btnreg"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btnreg"
-        app:layout_constraintTop_toBottomOf="@+id/sup1"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
         android:id="@+id/btnreg"
-        android:layout_width="89dp"
-        android:layout_height="52dp"
-        android:background="#5C808F99"
-        android:textSize="18sp"
+        android:layout_width="92dp"
+        android:layout_height="59dp"
+        android:background="#00FFFDFD"
+        android:text="@string/new_user_sign_up"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintEnd_toStartOf="@+id/btnfrgt"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957" />
-
-    <TextView
-        android:id="@+id/fpwd1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/btnfrgt"
-        app:layout_constraintEnd_toEndOf="@+id/btnfrgt"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="@+id/btnfrgt"
-        app:layout_constraintTop_toTopOf="@+id/btnfrgt"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/fpwd2"
-        android:layout_width="82dp"
-        android:layout_height="28dp"
-        android:text="Password?"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/btnfrgt"
-        app:layout_constraintEnd_toEndOf="@+id/btnfrgt"
-        app:layout_constraintStart_toStartOf="@+id/btnfrgt"
-        app:layout_constraintTop_toBottomOf="@+id/fpwd1" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.904" />
 
     <Button
         android:id="@+id/btnfrgt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#5C808F99"
+        android:layout_width="92dp"
+        android:layout_height="54dp"
+        android:background="#00FFFFFF"
+        android:text="@string/forgot_password"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.898" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
